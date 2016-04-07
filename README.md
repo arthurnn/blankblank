@@ -5,6 +5,7 @@ This is a test repo and gem
 ## Installation
 
 Add this line to your application's Gemfile:
+But you probably dont wanna do that.
 
 ```ruby
 gem 'blankblank'
