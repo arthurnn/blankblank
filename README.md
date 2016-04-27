@@ -10,6 +10,7 @@ But you probably dont wanna do that.
 ```ruby
 gem 'blankblank'
 ```
+(dont do it)
 
 And then execute:
 
