@@ -2,6 +2,7 @@
 
 A
 B
+C
 
 This is a test repo and gem....
 
