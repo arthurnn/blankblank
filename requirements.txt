@@ -1,4 +1,4 @@
 django
 requests
 Pbr
-MySQL___python
+MySQL__python
