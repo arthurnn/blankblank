@@ -1,4 +1,4 @@
-django
+Django
 requests
 Pbr
 MySQL__python
