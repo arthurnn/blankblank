@@ -2,3 +2,4 @@ Django
 requests
 Pbr
 MySQL__python
+many_versioned_wheel==0.1.0
