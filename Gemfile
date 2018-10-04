@@ -5,3 +5,4 @@ gemspec
 gem "rails"
 gem "puma"
 gem "pry"
+gem "activerecord"
