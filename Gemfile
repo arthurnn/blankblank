@@ -4,3 +4,4 @@ gemspec
 
 gem "rails"
 gem "puma"
+gem "pry"
