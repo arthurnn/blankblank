@@ -3,10 +3,9 @@ name: "Code scanning - action"
 on: [push]
 
 jobs:
-  CodeQL-Build:
+  Code-Scanning-Build:
     strategy:
       fail-fast: false
-    # CodeQL runs on ubuntu-latest and windows-latest
     runs-on: ubuntu-latest
 
     steps:
