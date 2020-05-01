@@ -6,8 +6,8 @@ RUN gem install rubocop
 RUN bundle config --global frozen 1
 
 
-RUN cd /github/workspace
 RUN echo $(pwd)
+RUN echo $(ls $GITHUB_WORKSPACE)
 RUN mkdir ../results
 
 
