@@ -5,10 +5,5 @@ RUN gem install rubocop
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
-
-RUN echo $(pwd)
-RUN echo $(ls $GITHUB_WORKSPACE)
-RUN mkdir ../results
-
-
-ENTRYPOINT ["rubocop --require ./sarif_formatter.rb --format SarifFormatter -o ../results/output.sarif"]
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
