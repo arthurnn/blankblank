@@ -1,18 +1,25 @@
-name: "Code scanning - action"
+name: "Rubocop action"
 
 on: [push]
 
 jobs:
-  CodeQL-Build:
+  rubocop_job:
+    runs-on: ubuntu-latest
+    name: Rubocop/Code-scanning
     strategy:
       fail-fast: false
-    # CodeQL runs on ubuntu-latest and windows-latest
-    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Rubocop run
+      uses: ./ # Uses an action in the root directory
+
+    - name: Printout
+      run: cat rubocop.sarif
 
     - name: Upload Sarif output
       uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: rubocop.sarif

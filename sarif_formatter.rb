@@ -21,8 +21,7 @@ class SarifFormatter < RuboCop::Formatter::BaseFormatter
     @rules = []
     @sarif["runs"] = [
       {"tool" => {
-         "driver" => { "name" => "Rubocop"},
-         "rules" => @rules
+         "driver" => { "name" => "Rubocop", "rules" => @rules},
        },
        "results" => @results
       }
