@@ -3,12 +3,11 @@ name: "Code scanning - action"
 on: [push]
 
 jobs:
-  Run:
+  rubocop_job:
+    runs-on: ubuntu-latest
+    name: Job to run rubocop and save results
     strategy:
       fail-fast: false
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
 
     steps:
     - name: Checkout repository
