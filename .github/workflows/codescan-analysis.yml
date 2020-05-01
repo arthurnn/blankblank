@@ -15,10 +15,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Rubocop run
-      run: |
-        mkdir ../results
-        echo $(pwd)
-        gem install rubocop
+      uses: ./ # Uses an action in the root directory
+
         
 
     - name: Upload Sarif output
