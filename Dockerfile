@@ -5,9 +5,8 @@ RUN gem install rubocop
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
+RUN echo $(pwd)
+RUN mkdir ../results
 
-WORKDIR /usr/src/app
-
-RUN mkdir /usr/src/results
 
 ENTRYPOINT ["rubocop --require ./sarif_formatter.rb --format SarifFormatter -o ../results/output.sarif"]

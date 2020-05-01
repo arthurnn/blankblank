@@ -5,7 +5,7 @@ on: [push]
 jobs:
   rubocop_job:
     runs-on: ubuntu-latest
-    name: Job to run rubocop and save results
+    name: Rubocop/Code-scanning
     strategy:
       fail-fast: false
 
@@ -16,7 +16,8 @@ jobs:
     - name: Rubocop run
       uses: ./ # Uses an action in the root directory
 
-        
+    - name: Printout
+      run: echo $(ls)
 
-    - name: Upload Sarif output
-      uses: github/codeql-action/upload-sarif@v1
+#    - name: Upload Sarif output
+#      uses: github/codeql-action/upload-sarif@v1
