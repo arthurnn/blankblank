@@ -12,6 +12,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Rubocop run
+      run:  mkdir ../results && gem install rubocop && rubocop --require ./sarif_formatter.rb --format SarifFormatter -o ../results/output.sarif
 
     - name: Upload Sarif output
       uses: github/codeql-action/upload-sarif@v1
