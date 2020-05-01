@@ -5,6 +5,8 @@ RUN gem install rubocop
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
+
+RUN cd /github/workspace
 RUN echo $(pwd)
 RUN mkdir ../results
 
