@@ -1,11 +1,11 @@
-name: "Rubocop action"
+name: "Rubocop"
 
 on: [push]
 
 jobs:
   rubocop_job:
     runs-on: ubuntu-latest
-    name: Rubocop/Code-scanning
+    name: Code Scanning job run
     strategy:
       fail-fast: false
 
@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Rubocop run
-      uses: ./ # Uses an action in the root directory
+      uses: arthurnn/code-scanning-rubocop/rubocop-scan@059a36b
 
     - name: Printout
       run: cat rubocop.sarif
