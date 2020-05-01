@@ -4,7 +4,5 @@ gemspec
 
 gem "rails"
 gem "puma"
-gem "pry"
-gem "activerecord"
-gem "sinatra"
 
+gem 'rubocop', require: false
