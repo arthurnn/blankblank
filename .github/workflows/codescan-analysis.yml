@@ -3,7 +3,7 @@ name: "Code scanning - action"
 on: [push]
 
 jobs:
-  Code-Scanning-Build:
+  Run:
     strategy:
       fail-fast: false
     runs-on: ubuntu-latest
@@ -15,6 +15,7 @@ jobs:
     - name: Rubocop run
       run: |
         mkdir ../results
+        echo $(pwd)
         gem install rubocop
         rubocop --require ./sarif_formatter.rb --format SarifFormatter -o output.sarif
 
