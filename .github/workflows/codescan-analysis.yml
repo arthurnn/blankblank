@@ -5,7 +5,6 @@ on: [push]
 jobs:
   rubocop_job:
     runs-on: ubuntu-latest
-    name: Code Scanning job run
     strategy:
       fail-fast: false
 
@@ -13,11 +12,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Rubocop run
-      uses: arthurnn/code-scanning-rubocop/rubocop-scan@059a36b
-
-    - name: Printout
-      run: cat rubocop.sarif
+    - name: Rubocop scan
+      uses: arthurnn/code-scanning-rubocop/rubocop-scan@master
 
     - name: Upload Sarif output
       uses: github/codeql-action/upload-sarif@v1
