@@ -5,6 +5,7 @@ on: [push]
 jobs:
   rubocop_job:
     runs-on: ubuntu-latest
+    name: Code Scanning Rubocop integration
     strategy:
       fail-fast: false
 
