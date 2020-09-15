@@ -1,6 +1,6 @@
 name: "Rubocop"
 
-on: [push]
+on: []
 
 jobs:
   rubocop:

@@ -8,3 +8,5 @@ gem 'puma'
 gem 'rails'
 
 gem 'rubocop', require: false
+
+gem "code-scanning-rubocop", "= 0.3.0"
